@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use engmath in your teaching or work, please cite it as below."
+title: "engmath: engineering mathematics with Python"
+type: software
+authors:
+  - family-names: Wang
+    given-names: Yanwei
+    email: wangyanwei@gmail.com
+    orcid: "https://orcid.org/0000-0002-8488-9833"
+    website: "https://github.com/ktwyw"
+version: 0.1.0
+date-released: "2026-09-26"
+license: MIT
+repository-code: "https://github.com/ktwyw/engmath"
+keywords:
+  - numerical methods
+  - engineering mathematics
+  - Python
+  - education
+  - Jupyter
+abstract: >-
+  Readable from-scratch implementations of the numerical and symbolic methods engineers use - root
+  finding, linear and nonlinear systems, interpolation, integration, differentiation, smoothing,
+  curve fitting, ODEs, boundary-value problems, PDEs, Fourier analysis, optimisation and linear
+  programming, Monte Carlo simulation and sparse solvers - validated against SciPy, exact solutions,
+  NIST certified values and theoretical orders of convergence, with a 21-notebook course built on
+  original engineering problems, real data files and worked solutions to all exercises.

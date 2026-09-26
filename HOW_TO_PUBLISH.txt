@@ -1,0 +1,37 @@
+PUBLISHING engmath TO GITHUB (same workflow as fluidmech and engstat)
+=====================================================================
+
+0. Decide about the solutions: if you will use the exercises for assessed work, move the solutions/
+   folder out of the project (keep it in a private repository) and delete the text
+   ' + sorted(glob.glob("solutions/*.ipynb"))' from .github/workflows/tests.yml.
+
+1. On github.com, create a NEW EMPTY repository named  engmath
+   (do NOT add a README, .gitignore or license - the project already has them).
+
+2. Unzip engmath.zip, open the engmath folder in VS Code, open a Git Bash terminal there, and run:
+
+   git init -b main
+   git config user.name "Yanwei Wang"
+   git config user.email "wangyanwei@gmail.com"
+   git add .
+   git commit -m "engmath 0.1.0: numerical methods library and notebook course"
+   git remote add origin https://github.com/ktwyw/engmath.git
+   git push -u origin main
+
+3. On the repository page: About (gear icon) -> description "Engineering mathematics with Python:
+   readable numerical methods validated against SciPy, a 21-notebook course with real data and worked
+   solutions"; topics: numerical-methods, engineering-mathematics, python, jupyter, education, scipy,
+   sympy, data-analysis. Optionally pin it.
+
+4. Check the "Actions" tab: tests (3 operating systems x 4 Python versions), validation, notebook
+   execution and lint should turn green. If anything is red, send a screenshot of the failing step.
+
+5. Try a notebook in Google Colab:
+   https://colab.research.google.com/github/ktwyw/engmath/blob/main/notebooks/02_root_finding.ipynb
+   (the first cell installs engmath from GitHub automatically - this works once the repo is public).
+
+To change a notebook later: edit notebooks/build_notebooks.py, run
+   python notebooks/build_notebooks.py
+then  git add .  ->  git commit -m "..."  ->  git push
+
+Delete this file after publishing if you like.
